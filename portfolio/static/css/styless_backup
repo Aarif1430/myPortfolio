@@ -1,0 +1,373 @@
+
+html,
+body {
+	height:100%;
+	background: url( "../img/background.png") center center;
+	font-family: Nunito-Regular;
+}
+
+/*----------Cover section----------*/
+
+
+#cover{
+	height: 100%;
+	background: url("../img/bball2.jpg") center;
+	background-size: cover;
+	width: auto;
+	color: white;
+	min-height: 30rem;
+	opacity: 1;
+
+}
+
+.maintext {
+	font-family: 'Cubano-Regular';
+	color: white;
+	font-size: 2.5rem;
+	background: rgba(0,0,0,0.6);
+	padding: 10.5rem 17.5rem 10rem 2.75rem;
+	max-width: 30%;
+}
+
+.fa-arrow-down{
+	padding-top: 20px;
+	padding-left: 70px;
+}
+
+
+.mottoo{
+	margin-top: 325px;
+	font-family: 'Cubano-Regular';
+	color: white;
+	font-size: 2rem;
+	float: right;
+	background: rgba(0,0,0,0.6);
+	padding: 4% 2% 4% 2%;
+	text-align: center;
+
+}
+
+.toppy {
+	padding-top: 900px;
+	text-align: left;
+}
+
+.bio{
+	font-size: 20px;
+	font-family: 'Cubano-Regular';
+	display: inline-block;
+}
+
+
+/*----------features section---*/
+
+
+#features{
+
+	text-align: center;
+	padding-top: 40px;
+	font-family: Cubano-Regular;
+	padding-bottom: 40px;
+
+}
+
+
+/*----------matches section----------*/
+
+
+
+#matches {
+
+	background-color: white;
+	text-align: center;
+	padding-top: 40px;
+	font-family: Cubano-Regular;
+	padding-bottom: 50px;
+
+}
+
+
+
+.tag-default {
+	font-size: 100px;
+}
+
+.match {
+	padding-top: 10px;
+}
+
+/*----------detail view---------*/
+
+#detail_data{
+	height: auto;
+	background: url( "../img/bball.jpeg") center center;
+	background-size: cover;
+}
+
+.detail_top {
+	text-align: center;
+	font-family: Cubano-Regular;
+	text-decoration: white;
+	color: white;
+	font-size: 1.75rem;
+	background: rgba(0,0,0,0.6);
+	padding: 1.5% 1.5% 3% 2%;
+	border-radius: 15px;
+
+}
+
+.date{
+color: white;
+font-size: 11px;
+}
+
+
+
+.detail_top .date {
+	float: right;
+}
+
+.data_stats {
+	text-align: center;
+	font-family: Cubano-Regular;
+}
+
+.data_stats i{
+	padding-top: 0px;
+}
+
+.data_stats p{
+	padding-bottom: 0px;
+}
+
+.ending{
+	text-align: center;
+	font-family: Cubano-Regular;
+}
+
+
+
+.conclusion{
+	text-align: center;
+	
+}
+
+/*----------Contact US---------*/
+
+#contact {
+	padding-top: 40px;
+	text-align: center;
+	font-family: Cubano-Regular;
+
+}
+
+#contact img {
+
+  max-height: 110px;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.5);
+  padding: 3px 3px 3px 3px;
+  float: left;
+
+}
+
+.bio2{
+	float: left;
+	text-align: center;
+	margin-left: 10px;
+}
+
+
+/*----------Responsiveness Width---------*/
+
+
+@media only screen and (min-width: 1680px) {
+
+#detail_data{
+	height: 115%;
+
+}
+
+
+
+@media only screen and (max-width: 1680px) {
+	
+	.maintext {
+	font-family: 'Cubano-Regular';
+	color: white;
+	font-size: 3.25rem;
+	padding: 5rem 18.5rem 65% .75rem;
+}
+
+
+.mottoo{
+	margin-top: 400px;
+	font-family: 'Cubano-Regular';
+	color: white;
+	font-size: 2.5rem;
+	float: right;
+	background: rgba(0,0,0,0.6);
+	padding: 1.5% 1% 1.5% 1%;
+	text-align: center;
+}
+
+#detail_data{
+	height: 105%;
+
+}
+
+
+@media only screen and (max-width: 1366px) {
+
+#detail_data{
+	height: 110%;
+}
+
+}
+
+@media only screen and (max-width: 991px) {
+	
+	.maintext {
+	font-family: 'Cubano-Regular';
+	color: white;
+	font-size: 2.5rem;
+	padding: 5rem 14.5rem 140% 1.75rem;
+}
+
+
+
+.mottoo{
+	margin-top: 400px;
+	font-family: 'Cubano-Regular';
+	color: white;
+	font-size: 1.45rem;
+	float: right;
+	background: rgba(0,0,0,0.6);
+	padding: 1.5% 1% 1.5% 1%;
+	text-align: center;
+
+}
+
+}
+
+
+
+@media only screen and (max-width: 767px) {
+	
+	.maintext {
+	font-family: 'Cubano-Regular';
+	color: white;
+	font-size: 3.5rem;
+	padding: 5rem 19.5rem 140% 1.75rem;
+}
+
+
+
+.mottoo{
+	display: none;
+
+}
+
+}
+
+
+@media only screen and (max-width: 640px) {
+
+#detail_data{
+	height: 120%;
+
+}
+
+}
+
+
+
+@media only screen and (max-width: 575px) {
+	
+	.maintext {
+	font-family: 'Cubano-Regular';
+	color: white;
+	font-size: 2.75rem;
+	padding: 5rem 15.5rem 25% 4.75rem;
+}
+
+
+
+.mottoo{
+	display: none;
+
+}
+
+}
+
+
+@media only screen and (max-width: 480px) {
+
+#detail_data{
+	height: 150%;
+
+}
+
+}
+
+
+
+@media only screen and (max-width: 400px) {
+	
+	.maintext {
+	font-family: 'Cubano-Regular';
+	color: white;
+	font-size: 2.75rem;
+	padding: 5rem 19.5rem 60% 2.75rem;
+}
+
+
+
+.mottoo{
+	display: none;
+
+}
+
+}
+
+
+
+/*----------Responsiveness Height---------*/
+
+
+@media only screen and (max-height: 874px) {
+	
+	.maintext {
+	font-family: 'Cubano-Regular';
+	color: white;
+	font-size: 3rem;
+	padding: 5rem 20.5rem 30% 1.75rem;
+}
+
+
+.mottoo{
+	margin-top: 400px;
+	font-family: 'Cubano-Regular';
+	color: white;
+	font-size: 2.5rem;
+	float: right;
+	background: rgba(0,0,0,0.6);
+	padding: 2.5% 1.5% 1.5% 2.5%;
+	text-align: center;
+}
+
+
+}
+
+
+@media only screen and (max-height: 724px) {
+	
+	.maintext {
+	font-family: 'Cubano-Regular';
+	color: white;
+	font-size: 1.75rem;
+	padding: 5rem 20.5rem 0% 1.75rem;
+}
+
+
+}
