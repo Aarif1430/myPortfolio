@@ -16,7 +16,7 @@ def pdf_download(request):
 		response['Content-Disposition'] = 'inline;filename=cv.pdf'
 		return response
 
-def post2(request):
+def deploying_django_app_with_wsgi_in_apache(request):
     return render(request, template_name='blog/html_template.html')
 
 class blogView(generic.ListView):
