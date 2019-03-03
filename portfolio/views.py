@@ -17,7 +17,7 @@ def pdf_download(request):
 		return response
 
 def deploying_django_app_with_wsgi_in_apache(request):
-    return render(request, template_name='blog/html_template.html')
+    return render(request, template_name='blog/django_deploy_aws.html')
 
 class blogView(generic.ListView):
     template_name='blog/post_list.html'

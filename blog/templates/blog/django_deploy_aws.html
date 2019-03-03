@@ -1,0 +1,203 @@
+{% extends "portfolio/base.html" %} 
+
+{% load staticfiles %}
+{% block content %}
+{% include "portfolio/contents_list.html" %}
+<div class="three-fourth column">
+<section id="content" class="body">
+ <div class="content-wrapper">
+      <div class="content-wrapper__inner">
+        <article class="post-container post-container--single">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="24 Apr 2017" class="post-meta__date date">01 March 2019</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#outreach">outreach</a> </span>
+    </div>
+    <h2 class="post-title">How to serve Django Apps with Apache and Wsgi on AWS EC2 instance</h2>
+  </header>
+<script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+  <section class="post">
+    <p><em> In this blog post, we will demonstrate how to deploy django application into AWS instance using Apache, Git and Python virtual environment.
+    
+    </em></p>
+
+<h2 id="">Prerequisites</h2>
+
+<p>
+<ul>
+  <li><em> AWS EC2 instance with Ubuntu18.04</em></li>
+  <li><em> GitHub Account </em></li>
+</ul>
+</p>
+<p> We will be configuring Amazon Elastic Computing Cloud<em>(AWS EC2)</em>, and install all the necessary packages.
+You can get started with Amazon EC2 using the <a href="https://aws.amazon.com/free/" target="_blank">AWS Free Tier.</a>
+</p>
+
+<h2 id="">Tasks</h2>
+
+<p> To complete this tutorial, perform the following task.
+<ul>
+  <li><em><a href="#ec2-connect-instance"> Connect to your instance </a></em></li>
+  <li><em><a href="#installing_packages"> Installing Python, Git and Apache </a></em></li>
+  <li><em><a href="#configuring_apache"> Configuring Apache configuration file </a></em></li>
+</ul>
+</p>
+<h2 id="ec2-connect-instance">Step 1: Connect to your Instance</h2>
+<p>To connect to your instance, you need a private-key file to login to your EC2 using SSH. Download a key file from left navigation bar or create the same for your instance. 
+Change the permission of key file using following command.
+</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>
+<span class="kn">chmod</span> <span class="nn">400 "your_key.pem"</span>
+
+</code></pre>
+</div>
+
+<p> Connect to instance using putty or terminal. Example.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>
+<span class="kn">ssh -i</span><span class="nn"> "your_key.pem" ubuntu@ec2-3-17-18-64.us-east-2.compute.amazonaws.com</span>
+
+</code></pre>
+</div>
+
+<h2 id="installing_packages">Step 2: Installing Python, Git and Apache </h2>
+<p>After successfull login, You should be able to see the command line interface of <em>EC2 Ubuntu instance</em>. Update the machine using following command
+
+</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>
+<span class="kn">sudo apt-get update</span>
+
+</code></pre>
+</div>
+
+<p> Install Python, Git and Apache using following commands</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>
+<span class="kn">sudo apt-get install python3-pip apache2 libapache2-mod-wsgi-py3</span>
+
+</code></pre>
+</div>
+
+<p> We need to create python <code><em>virtualenv</em> </code> which is used to isolate different environments for python. We can install it using python <code><em>pip</em></code></p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>
+<span class="kn">sudo pip3 install virtualenv</span>
+
+</code></pre>
+</div>
+
+<p> After <code><em>virtualenv</em> </code> installation, We will create directory for our project and install virtual environment inside directory></p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>
+<span class="kn">sudo mkdir myproject</span>
+<span class="kn">cd myproject</span>
+</code></pre>
+</div>
+
+<p> Inside the project directory, Create <em>Python</em> virtual environment using following command</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>
+<span class="kn">sudo virtualenv -p python3 venv</span>
+</code></pre>
+</div>
+<p> This will install local version of python and pip inside folder <em>venv.</em>
+Activate virtual environment using following command. The command prompt will also change and will look like
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>
+<span class="kn">source venv/bin/activate</span>
+<span class="n">(venv)</span><span class="nn"> ubuntu@ec2-172-31-46-8:</span><span class="nn"> ~/myproject$</span><span class="n">$</span>
+
+</code></pre>
+</div>
+</p>
+<p>With your <em>virtualenv </em>active install django or any other package </p>
+<p>For sake of explaination, we will be importing an existing django project from <a href="https://github.com/Aarif1430/Django_Crispy_Forms" target="_blank"><em>GitHub</em></a>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>
+<span class="n">git clone https://</span><span class="kn" href="javascript: void(0)">github.<span class = "k">com</span>/Aarif1430/Django_Crispy_Forms.git</span>
+
+</code></pre>
+</p>
+
+<p> After successfully cloning <em>GitHub</em> repository to your project folder. Run the following commands to install the necessary packages and test the application in local browser to see if everything
+is working fine....
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>
+<span class="n">pip3 install</span><span class="kn" href="javascript: void(0)"> -r requirements.txt</span>
+<span class="kn">python manage.py runserver 0:8000</span>
+</code></pre>
+Before running application in browser, Change the <code> settings.py </code> inside<em> DjangoResumeParser folder 
+<code> <em>ALLOWED_HOSTS = ["*"]</em></code></em>.
+The URL is :
+<em>ELastic_IP_Adress_EC2:8000/ResumeParser/bootstrap4/ </em></p>
+<p>You should be able to see django application home page in browser. Congrats you have run Django app successfully in cloud instance.
+The next steps are to configure <em>Apache</em> to run our Django Application. 
+</p>
+
+<h2 id="configuring_apache">Step 3: Configuring Apache configuration file </h2>
+<p>This section explores how you can configure different settings to serve your application through <em>Apache2 and mod_wsgi.</em>
+<em><a href ="#installing_packages"> Installing Apache and mod_wsgi</a></em>. To configure Apache to use your Wsgi we will be configuring
+default configuration file. Open file using command
+</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>
+<span class="kn">sudo vim /etc/apache2/sites-available/000-default.conf</span>
+</code></pre>
+</div>
+<p> Edit the configuration file as shown below.
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>
+<span class="kn">< VirtualHost *:80>
+        ServerAdmin myemail@gmail.com
+        ServerName myname.me
+        DocumentRoot /var/www/myPortfolio
+
+        Alias /static /var/www/myPortfolio/portfolio/static
+        < Directory "/var/www/myPortfolio/portfolio/static">
+                Options FollowSymLinks
+                Order allow,deny
+                Allow from all
+                Require all granted
+        </ Directory>
+
+        ErrorLog /var/www/logs/myport_error.log
+
+        WSGIDaemonProcess myPortfolio python-path=/var/www/myPortfolio:/var/www/venv/lib/python3.6/site-packages home=/var/www/myPortfolio
+        WSGIProcessGroup myPortfolio
+        WSGIScriptAlias / /var/www/myPortfolio/myapp/wsgi.py
+
+        < Directory /var/www/myPortfolio/myapp>
+                < Files wsgi.py>
+                        Require all granted
+                < /Files>
+        < /Directory >
+< /VirtualHost>
+</span>
+</code></pre>
+</p>
+<p> Save the file and Enable site using following command
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>
+<span class="kn">a2ensite 000-default.conf</span>
+</code></pre></p>
+<p>
+Reload Apache service
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>
+<span class="kn">sudo service apache2 reload</span>
+<code><span class="kn">sudo service apache2 status</span></code>
+</code></pre>
+
+</div>
+To check if everything is working fine. Simply type your IP Adress in browser.
+</p>
+</section>
+
+{% include "portfolio/discussion.html" %}
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+</div>
+
+ {% endblock %}
