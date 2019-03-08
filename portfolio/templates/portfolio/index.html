@@ -18,7 +18,7 @@
 			    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
 </head>
 <body id="jumbo" class="panel-cover panel-cover--collapsed">
-					<div class="container">
+					<div class="container" id="index">
   					<div class ="row">
 					  <div class="col-sm-6 square">
 					  <div class="header">
@@ -28,11 +28,11 @@
 					</div>
 					<div class = "section-feature" style="margin-top:40px">
 					<div class="col-sm-6 form-group"><span class="pull-right">
-	          			<ul class="nav navbar-nav" >
-							<li class="active"><a href="/"><b>Home</b></a></li>
-							<li><a href="{% url 'about' %}"><b>About</b></a></li>
-							<li><a href="{% url 'blogs' %}"><b>Blog</b></a></li>
-							<li><a href="{% url 'about' %}"><b>Contact</b></a></li>
+	          <ul class="nav navbar-nav">
+							<li class="active"><a href="/" style="padding-left:25px;padding-right:25px"><b>Home</b></a></li>
+							<li><a href="{% url 'about' %}" style="padding-left:25px;padding-right:25px"><b>About</b></a></li>
+							<li><a href="{% url 'blogs' %}" style="padding-left:25px;padding-right:25px"><b>Blog</b></a></li>
+							<li><a href="{% url 'about' %}" style="padding-left:25px;padding-right:25px"><b>Contact</b></a></li>
 						</ul>
 						</span>
 					<hr  class="divider">
