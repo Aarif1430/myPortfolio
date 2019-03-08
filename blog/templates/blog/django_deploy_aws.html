@@ -2,8 +2,7 @@
 
 {% load staticfiles %}
 {% block content %}
-{% include "portfolio/contents_list.html" %}
-<div class="three-fourth column">
+<div class="container">
 <section id="content" class="body">
  <div class="content-wrapper">
       <div class="content-wrapper__inner">
@@ -146,18 +145,18 @@ default configuration file. Open file using command
 </div>
 <p> Edit the configuration file as shown below.
 <div class="language-python highlighter-rouge"><pre class="highlight"><code>
-<span class="kn">< VirtualHost *:80>
+<span class="kn">&lt;VirtualHost *:80&gt;
         ServerAdmin myemail@gmail.com
         ServerName myname.me
         DocumentRoot /var/www/myPortfolio
 
         Alias /static /var/www/myPortfolio/portfolio/static
-        < Directory "/var/www/myPortfolio/portfolio/static">
+        &lt;Directory "/var/www/myPortfolio/portfolio/static"&gt;
                 Options FollowSymLinks
                 Order allow,deny
                 Allow from all
                 Require all granted
-        </ Directory>
+        &lt;/Directory&gt;
 
         ErrorLog /var/www/logs/myport_error.log
 
@@ -165,12 +164,12 @@ default configuration file. Open file using command
         WSGIProcessGroup myPortfolio
         WSGIScriptAlias / /var/www/myPortfolio/myapp/wsgi.py
 
-        < Directory /var/www/myPortfolio/myapp>
-                < Files wsgi.py>
+        &lt;Directory /var/www/myPortfolio/myapp&gt;
+                &lt;Files wsgi.py&gt;
                         Require all granted
-                < /Files>
-        < /Directory >
-< /VirtualHost>
+                &lt;/Files&gt;
+        &lt;/Directory&gt;
+&lt;/VirtualHost&gt;
 </span>
 </code></pre>
 </p>
@@ -188,10 +187,10 @@ Reload Apache service
 </div>
 To check if everything is working fine. Simply type your IP Adress in browser.
 </p>
-</section>
 
-{% include "portfolio/discussion.html" %}
+</section>
 </div>
+{% include "portfolio/discussion.html" %}
 </div>
 </div>
 </article>

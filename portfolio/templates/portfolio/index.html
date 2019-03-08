@@ -1,78 +1,101 @@
 
-{% extends "portfolio/base.html" %} 
-{% load staticfiles %}
+<html>
+	<head>
+		{% block head %}
+			<title>Aarif Malik</title>
+		{%endblock%}
+		{% load staticfiles %}
+				<!-- CSS Files -->
+				<link rel="shortcut icon" href="{% static 'img/icon.png' %}">
 
-{% block content %}
-<div id="jumbo" class="panel-cover panel-cover--collapsed">
-<div class="container">
-  <section id="cover">
-  				<div style="  text-align: center"; class="container" id="main_container">
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+				
+				<link href="{% static 'css/style.css' %}" rel="stylesheet" media="screen" type="text/css">
+			
+				<link href="{% static 'css/paper-bootstrap-wizard.css' %}" rel="stylesheet" />
+
+				<!-- Fonts and Icons -->
+			    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
+</head>
+<body id="jumbo" class="panel-cover panel-cover--collapsed">
+					<div class="container">
   					<div class ="row">
-					<a>
-          			<img src="{% static 'img/profile.jpg' %}" class="user-image">
-          			</a>
-          			<h1 class="asap-font">Arif Malik</h1>
-						<hr class="divider">
-						<h3 class="asap-font">Data Scientist / Developer </br> Mumbai, India</h3>
-						<hr  class="divider">
-						<h3 class="asap-font" id = "asap-font">I like to build things. Obsessed with knowledge,Programming, Problem Solving and Technology. 
-						</h3>
+					  <div class="col-sm-6 square">
+					  <div class="header">
+					  <img src="{% static 'img/icon.png' %}" alt="logo" />
+					  <h1 class="asap-font">Arif Malik</h1>
 					</div>
-
-				</div>
-	</section>
-
-	<section style="  text-align: center"; id ="features">
+					</div>
+					<div class = "section-feature" style="margin-top:40px">
+					<div class="col-sm-6 form-group"><span class="pull-right">
+	          			<ul class="nav navbar-nav" >
+							<li class="active"><a href="/"><b>Home</b></a></li>
+							<li><a href="{% url 'about' %}"><b>About</b></a></li>
+							<li><a href="{% url 'blogs' %}"><b>Blog</b></a></li>
+							<li><a href="{% url 'about' %}"><b>Contact</b></a></li>
+						</ul>
+						</span>
+					<hr  class="divider">
+					</div>
+					</div>
+					</div>
+					<h1 class="asap-font" style="font-size:60px"><b>I DESIGN AND</br> DEVELOP</b></h1>
+					
+					<a href="mailto:malikarif13@gmail.com"  role="button" class="btn btn-info">SEND EMAIL</a>
+					</div>
+					
 	<div class = "section-features">
-		<div class = "container">
-				<div class ="row">
-					<div class="col-sm-2 square">
-						{# <i class="fa fa-star fa-5x icon1"></i> #}
-						<a href="http://youtube.maxgoodridge.com" class="btn btn-lg btn-danger outline" target="_blank" id="youtube" data-toggle="tooltip" 
-						title="To me YouTube isn't just watch random stuff or suggested videos by Google, It's more than that and ofcourse a great learning platform and video sharing website.">
-							<i class="fa fa-youtube-play" aria-hidden="true"></i> YouTube</a>
-						<hr class = "green-hr">
+
+            <ul class="nav navbar-nav">
+ 
+              <!-- Twitter -->
+              <li class="navigation__item">
+                <a href="http://youtube.maxgoodridge.com" class="btn btn-lg btn-danger outline" target="_blank" id="youtube" data-toggle="tooltip" >
+							<i class="fa fa-youtube-play fa-lg" aria-hidden="true"></i></a>
+							
+              </li>       
+              <!-- Facebook -->
+              <li class="navigation__item">
+                <a href="https://www.instagram.com/malikaarif1430/" class="btn btn-lg btn-warning outline" target="_blank" id="instagram" data-toggle="tooltip">
+							<i class="fa fa-instagram fa-lg" aria-hidden="true"></i> </a>
 						
-					</div>
-					<div class="col-sm-2 square">
-						{# <i class="fa fa-sort-numeric-desc fa-5x icon2"> </i> #}
-						<a href="https://www.instagram.com/malikaarif1430/" class="btn btn-lg btn-warning outline" target="_blank" id="instagram" data-toggle="tooltip" 
-						title="The greates pleasure in life is doing what people say you cannot do.">
-							<i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>
-						<hr class = "green-hr">
-					</div>
+              </li>
+            
 
-					<div class="col-sm-3 square">
-							{# <i class="fa fa-recycle fa-5x icon1"> </i> #}
-							<a href="https://github.com/Aarif1430" class="btn btn-lg btn-success outline" target="_blank" id="github"
-							data-toggle="tooltip" 
-						title="Best distributed version control and source code management repository.">
-								<i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
-							<hr class = "green-hr">
-						</div>
-					<div class="col-sm-3 square">
-						{# <i class="fa fa-recycle fa-5x icon1"> </i> #}
-						<a href="https://stackoverflow.com/users/8888612/aarif1430?tab=profile" class="btn btn-lg btn-info outline" target="_blank" id="se"
-						data-toggle="tooltip" 
-						title="Best platform for users to ask and answer questions. Features quesitons in wide range of programming languages.">
-							<i class="fa fa-stack-overflow" aria-hidden="true"></i> Stack Overflow</a>
-						<hr class = "green-hr">
-					</div>
+            
+              <!-- LinkedIn -->
+              <li class="navigation__item">
+                <a href="https://github.com/Aarif1430" class="btn btn-lg btn-success outline" target="_blank" id="github">
+								<i class="fa fa-github fa-lg" aria-hidden="true"></i> </a>
+							
+              </li>
+            
 
-					<div class="col-sm-2 square">
-								{# <i class="fa fa-recycle fa-5x icon1"> </i> #}
-								<a href="https://twitter.com/MalikAarif1430" class="btn btn-lg btn-primary outline" target="_blank" id="facebook" data-toggle="tooltip" 
-								title="An online news and social networking service where users posts through message and also follows others.">
-									<i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a>								
-									<hr class = "green-hr">
-							</div>
-				</div>
-			</div> <!-- the rows -->
-		</div> <!-- div container -->
-	</div> <!-- section-features -->
-</section> <!-- 2nd Section -->
+            
+              <!-- GitHub -->
+              <li class="navigation__item">
+                <a href="https://stackoverflow.com/users/8888612/aarif1430?tab=profile" class="btn btn-lg btn-info outline" target="_blank" id="se">
+							<i class="fa fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
+              </li>
+            
+
+            
+              <!-- Email -->
+              <li class="navigation__item">
+            <a href="https://www.linkedin.com/in/arif-malik-777a7960/" class="btn btn-lg btn-primary outline" target="_blank" id="facebook">
+									<i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>								
+              </li>
+            
+
+            <!-- RSS -->
+            <li class="navigation__item">
+             <a href="https://twitter.com/MalikAarif1430" class="btn btn-lg btn-primary outline" target="_blank" id="facebook" >
+									<i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>								
+            </li>
+          
+            </ul>
+         
 
 </div>
-</div>
-
-{% endblock %}
+</body>
+</html>

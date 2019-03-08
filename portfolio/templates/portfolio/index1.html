@@ -1,0 +1,78 @@
+
+{% extends "portfolio/base.html" %} 
+{% load staticfiles %}
+
+{% block content %}
+<div id="jumbo" class="panel-cover panel-cover--collapsed">
+<div class="container">
+  <section id="cover">
+  				<div style="  text-align: center"; class="container" id="main_container">
+  					<div class ="row">
+					<a>
+          			<img src="{% static 'img/profile.jpg' %}" class="user-image">
+          			</a>
+          			<h1 class="asap-font">Arif Malik</h1>
+						<hr class="divider">
+						<h3 class="asap-font">Data Scientist / Developer </br> Mumbai, India</h3>
+						<hr  class="divider">
+						<h3 class="asap-font" id = "asap-font">I like to build things. Obsessed with knowledge,Programming, Problem Solving and Technology. 
+						</h3>
+					</div>
+
+				</div>
+	</section>
+
+	<section style="  text-items: center"; id ="features">
+	<div class = "section-features">
+		<div class = "container">
+				<div class ="row">
+					<div class="col-sm-2 square">
+						{# <i class="fa fa-star fa-5x icon1"></i> #}
+						<a href="http://youtube.maxgoodridge.com" class="btn btn-lg btn-danger outline" target="_blank" id="youtube" data-toggle="tooltip" 
+						title="To me YouTube isn't just watch random stuff or suggested videos by Google, It's more than that and ofcourse a great learning platform and video sharing website.">
+							<i class="fa fa-youtube-play" aria-hidden="true"></i> YouTube</a>
+						<hr class = "green-hr">
+						
+					</div>
+					<div class="col-sm-2 square">
+						{# <i class="fa fa-sort-numeric-desc fa-5x icon2"> </i> #}
+						<a href="https://www.instagram.com/malikaarif1430/" class="btn btn-lg btn-warning outline" target="_blank" id="instagram" data-toggle="tooltip" 
+						title="The greates pleasure in life is doing what people say you cannot do.">
+							<i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>
+						<hr class = "green-hr">
+					</div>
+
+					<div class="col-sm-3 square">
+							{# <i class="fa fa-recycle fa-5x icon1"> </i> #}
+							<a href="https://github.com/Aarif1430" class="btn btn-lg btn-success outline" target="_blank" id="github"
+							data-toggle="tooltip" 
+						title="Best distributed version control and source code management repository.">
+								<i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+							<hr class = "green-hr">
+						</div>
+					<div class="col-sm-3 square">
+						{# <i class="fa fa-recycle fa-5x icon1"> </i> #}
+						<a href="https://stackoverflow.com/users/8888612/aarif1430?tab=profile" class="btn btn-lg btn-info outline" target="_blank" id="se"
+						data-toggle="tooltip" 
+						title="Best platform for users to ask and answer questions. Features quesitons in wide range of programming languages.">
+							<i class="fa fa-stack-overflow" aria-hidden="true"></i> Stack Overflow</a>
+						<hr class = "green-hr">
+					</div>
+
+					<div class="col-sm-2 square">
+								{# <i class="fa fa-recycle fa-5x icon1"> </i> #}
+								<a href="https://twitter.com/MalikAarif1430" class="btn btn-lg btn-primary outline" target="_blank" id="facebook" data-toggle="tooltip" 
+								title="An online news and social networking service where users posts through message and also follows others.">
+									<i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a>								
+									<hr class = "green-hr">
+							</div>
+				</div>
+			</div> <!-- the rows -->
+		</div> <!-- div container -->
+	</div> <!-- section-features -->
+</section> <!-- 2nd Section -->
+
+</div>
+</div>
+
+{% endblock %}
