@@ -421,11 +421,11 @@ color: black !important;
   left: 10px;
 }
 .section-features {
-  margin-inline-end: 100%;
+  margin-right: 100%;
 }
 .navbar-nav > li{
-  padding-left:8px;
-  padding-right:8px;
+  padding-left:5px;
+  padding-right:5px;
 }
 #index{
   width: 100% !important;
