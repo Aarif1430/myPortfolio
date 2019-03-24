@@ -2,15 +2,26 @@
 {% block content %}
 
 <div class="container">
-
-      <h2><a href="{% url 'deploying_django_app_with_wsgi_in_apache' %}">Deploying Django App with Apache and Wsgi</a></h2>
-<section>
+ <div class="content-wrapper">
+      <div class="content-wrapper__inner">
+      <h3> <b>Web Development </b></h3>
+      <h4><li><a href="{% url 'deploying_django_app_with_wsgi_in_apache' %}">Deploying Django App with Apache and Wsgi</a></h4></li>
         <p class="excerpt">Deploying django with <a href="https://httpd.apache.org/" class="ourl" target="_tab">apache</a> and <a href="https://modwsgi.readthedocs.io/en/develop/" class="ourl" target="_tab">mod_wsgi</a> is a simple way to get django project into production.
         The <em>mod_wsgi</em> is an Apache HTTP Server module that provides WSGI compliant interface for hosting Python based
         web applications under Apache. This blog is a guide to deploy django app on <em> Amazon ec2</em> instance using <em>git.</em> It also explains about mapping ec2 elastic IP with godaddy DNS.
-
+</li>
 </p>
-        <div class="post-list__meta"><time datetime="02 March 2019" class="post-list__meta--date date">02 March 2019</time> • <span class="post-meta__tags">on <a href="/tags/#SM">SM</a> <a href="/tags/#news">news</a> </span></div>
-        <hr class="post-list__divider">
+        <div class="post-list__meta"><u><time datetime="02 March 2019" class="post-list__meta--date date">02 March 2019</time> • <span class="post-meta__tags">on <a href="/tags/#SM">SM</a> <a href="/tags/#news">news</a> </span> </u> </div>
+
+      <h3> <b>Machine Learning</b></h3>
+      <h4><li><a href="{% url 'linear_regression_in_new_fashion' %}">Visualizing Linear Regression</a></li></h4>
+        <p class="excerpt">Turing award winner <a href="https://en.wikipedia.org/wiki/Jim_Gray_(computer_scientist)" class="ourl" target="_tab">Jim Gray </a>imagined data science as a "fourth paradigm" of discovery based on <em>data-intensive</em> 
+        science and asserted that "everything about science is changing because of the impact of information technology" and the data deluge.
+</p>
+        <div class="post-list__meta"><u><time datetime="13 March 2019" class="post-list__meta--date date">13 March 2019</time> • <span class="post-meta__tags">on <a href="/tags/#SM">SM</a> <a href="/tags/#news">news</a> </span> </u> </div>
+</div>
+</div>
+
   </div>
+
  {% endblock %}

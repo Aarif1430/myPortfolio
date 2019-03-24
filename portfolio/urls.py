@@ -5,6 +5,9 @@ urlpatterns = [
     url(r'^$', views.IndexView.as_view(), name="index"),
     url(r'^pdf_download/$', views.pdf_download, name='pdf_download'),
     url(r'^deploying_django_app_with_wsgi_in_apache/$', views.deploying_django_app_with_wsgi_in_apache, name='deploying_django_app_with_wsgi_in_apache'),
+    url(r'^linear_regression_in_new_fashion/$', 
+        views.linear_regression_in_new_fashion, name='linear_regression_in_new_fashion'
+        ),
     url(r'^blogs/$', views.blogView.as_view(), name='blogs'),
     url(r'^about/$', views.aboutView.as_view(), name='about'),
 ]

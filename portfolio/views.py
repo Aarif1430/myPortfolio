@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse, redirect
+from django.shortcuts import render, HttpResponse
 from django.views import generic
 import os
 
@@ -19,6 +19,9 @@ def pdf_download(request):
 def deploying_django_app_with_wsgi_in_apache(request):
     return render(request, template_name='blog/django_deploy_aws.html')
 
+def linear_regression_in_new_fashion(request):
+    return render(request, template_name='blog/linear_regression_in_new_fashion.html')
+    
 class blogView(generic.ListView):
     template_name='blog/post_list.html'
 
